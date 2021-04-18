@@ -22,7 +22,7 @@ class App extends React.Component {
   }
 
   addTrack(track) {
-    if( this.state.playlistTracks.find(savedTrack => savedTrack.id === track.id)){
+    if( this.state.playlistTracks && this.state.playlistTracks.find(savedTrack => savedTrack.id === track.id)){
       return;
     }
     
@@ -45,7 +45,7 @@ class App extends React.Component {
             
             <SearchResults searchResults={this.state.searchResults} onAdd = {this.addTrack}/>
             
-            <Playlist playlistName = {this.playlistName} playlistTracks = {this.playlistTracks}/>
+            <Playlist playlistName = {this.playlistName} playlistTracks = {this.state.playlistTracks}/>
           </div>
         </div>
       </div>
