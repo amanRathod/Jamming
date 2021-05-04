@@ -1,4 +1,4 @@
-const clientid = '4e513971bdd249d88be01b4ac168a5b3';
+const clientid = ''; // Use your own client_id and dont share
 const redirectUri = 'http://localhost:3000/';
 
 let accessToken;
